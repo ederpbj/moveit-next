@@ -68,32 +68,3 @@ a{
     flex-direction: column; /*próximos elementos ficam um abaixo do outro, em coluna*/
 }
 
-.experience-bar{
-    display: flex;
-    align-items: center;
-}
-
-/* pega só o span */
-.experience-bar span{
-    font-size: 1rem;
-}
-
-/* pega exatamente o que tem na div em um nível */
-.experience-bar > div{
-    flex: 1;
-    height: 4px; 
-    border-radius: 4px;
-    background: var(--gray-line);
-}
-/* Div dentro da div */
-.experience-bar > div > div{
-    height: 4px; 
-    border-radius: 4px;
-    background: var(--green);
-}
-
-span.current-experience{
-    position: absolute;
-    top: 52px;
-    transform: translateX(50%);
-}

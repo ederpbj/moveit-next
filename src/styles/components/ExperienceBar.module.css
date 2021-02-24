@@ -1,0 +1,29 @@
+.experienceBar{
+    display: flex;
+    align-items: center;
+}
+
+/* pega só o span */
+.experienceBar span{
+    font-size: 1rem;
+}
+
+/* pega exatamente o que tem na div em um nível */
+.experienceBar > div{
+    flex: 1;
+    height: 4px; 
+    border-radius: 4px;
+    background: var(--gray-line);
+}
+/* Div dentro da div */
+.experienceBar > div > div{
+    height: 4px; 
+    border-radius: 4px;
+    background: var(--green);
+}
+
+span.currentExperience{
+    position: absolute;
+    top: 52px;
+    transform: translateX(50%);
+}
