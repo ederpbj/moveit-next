@@ -69,6 +69,8 @@ export function Countdown() {
                 >
                     {/* {isActive ? 'Abandonar ciclo' : 'Iniciar ciclo'} */}
                     Ciclo encerrado
+
+                    <img src="icons/Vector.svg" alt="Check" />
                 </button>
             ) : (
                     <>
