@@ -1,0 +1,18 @@
+.container{
+    height: 100vh; /* Pega 100% da tela */
+    max-width: 992px;
+    margin: 0 auto; /* Centraliza */
+    padding: 2.5rem 2rem; /* Espaçamento interno */
+
+    display: flex;
+    flex-direction: column; /*próximos elementos ficam um abaixo do outro, em coluna*/
+}
+
+.container section{
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*Duas colunas com tamanho igual */
+    gap: 6.25rem; /*espaçamento entre elas*/
+    align-content: center;
+}

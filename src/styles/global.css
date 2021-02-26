@@ -58,13 +58,3 @@ a{
     text-decoration: none;
 }
 
-.container{
-    height: 100vh; /* Pega 100% da tela */
-    max-width: 992px;
-    margin: 0 auto; /* Centraliza */
-    padding: 2.5rem 2rem; /* Espaçamento interno */
-
-    display: flex;
-    flex-direction: column; /*próximos elementos ficam um abaixo do outro, em coluna*/
-}
-

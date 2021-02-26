@@ -1,0 +1,52 @@
+.countdownContainer{
+    display: flex;
+    align-items: center;
+    font-family: Rajdhani;
+    font-weight: 600;
+    color: var(--title);
+}
+
+.countdownContainer > div{ /*primeiras div dentro dele*/
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background: var(--white);
+    box-shadow: 0 0 68px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    font-size: 8.5rem;
+    text-align: center;
+}
+
+.countdownContainer > div span{ /*span dentro das primeiras divs*/
+    flex: 1;
+}
+
+.countdownContainer > div span:first-child{ /*primeiro filho do contador*/
+    border-right: 2px solid #f8f1f3;
+}
+
+.countdownContainer > div span:last-child{ /*ultimo filho do contador*/
+    border-left: 2px solid #f8f1f3;
+}
+
+.countdownContainer > span{ /*primeiro span dentro do cowntdown*/
+    font-size: 6.25rem;
+    margin: 0 0.5rem;
+}
+
+.countdownButton{ /*estilo do botão cowntdown*/
+    width: 100%;
+    height: 5rem;
+
+    margin-top: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 5px;
+}
