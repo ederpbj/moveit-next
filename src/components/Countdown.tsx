@@ -1,10 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/Countdown.module.css';
 
 //é uma variável global
 let countdownTimeout: NodeJS.Timeout;
 
 export function Countdown() {
+    //Usando context criado para toda aplicação
+    const { startNewChallenge } = useContext(ChallengesContext);
+
     const [time, setTime] = useState(0.05 * 60); //define tempo de 25 min
     const [isActive, setIsActive] = useState(false); //monitora se esta ativo botão
     const [hasFineshed, setHasFineshed] = useState(false); //monitora se finalizou cowntdown
@@ -44,6 +48,7 @@ export function Countdown() {
             setHasFineshed(true); //chegou em zero o time
             setIsActive(false); //setar como inativo o botão
             // console.log('finalizou!')
+            startNewChallenge(); //vem do context da aplicação
         }
         // console.log(active);
     }, [isActive, time])
