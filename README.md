@@ -14,6 +14,8 @@ Projeto moveit-next
 
 [Fontes google](https://fonts.google.com/)
 
+[Notificações mozila](https://developer.mozilla.org/pt-BR/docs/Web/API/Notification)
+
 ### Outros videos
 
 [Equipe Rocket](https://www.youtube.com/watch?v=5CZmkjFHe4U&ab_channel=Rocketseat)
