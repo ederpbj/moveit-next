@@ -16,6 +16,10 @@ Projeto moveit-next
 
 [Notificações mozila](https://developer.mozilla.org/pt-BR/docs/Web/API/Notification)
 
+[Netlify - Para deploy](https://www.netlify.com/)
+
+[Vercel - deploy](http://vercel.com/)
+
 ### Outros videos
 
 [Equipe Rocket](https://www.youtube.com/watch?v=5CZmkjFHe4U&ab_channel=Rocketseat)
@@ -43,6 +47,19 @@ Projeto moveit-next
 `yarn add js-cookie` >> trabalhar com armazenamento nos cookies
 
 `yarn add @types/js-cookie -D` >> tipagem para cookies, no impor aparece ..., D: dependencia de desenvolvimento
+
+>> Só para projetos front-end
+
+`npm i -g vercel` instalar version
+
+`vercel -h` abre as opções
+
+`vercel login` para logar
+
+`vercel` para iniciar o deploy
+
+`vercel --prod` para iniciar o deploy direto para produção, endereço final.
+
 
 `` >>
 
