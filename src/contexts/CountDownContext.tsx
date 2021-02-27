@@ -41,7 +41,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
         clearTimeout(countdownTimeout);
         setIsActive(false);
         setHasFineshed(false);
-        setTime(0.05 * 60);
+        setTime(25 * 60);
     }
 
     //Dispara efeitos colaterais, após algum evento

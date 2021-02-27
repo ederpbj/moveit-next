@@ -20,6 +20,10 @@ Projeto moveit-next
 
 [Vercel - deploy](http://vercel.com/)
 
+[Moveit Vercel Dev](https://moveit-next-ederpbj.vercel.app/)
+
+[Moveit Vercel Prod](https://moveit-next-peach.vercel.app/)
+
 ### Outros videos
 
 [Equipe Rocket](https://www.youtube.com/watch?v=5CZmkjFHe4U&ab_channel=Rocketseat)
@@ -56,9 +60,12 @@ Projeto moveit-next
 
 `vercel login` para logar
 
+`yarn run build` para refatorar antes do deploy
+
 `vercel` para iniciar o deploy
 
 `vercel --prod` para iniciar o deploy direto para produção, endereço final.
+
 
 
 `` >>
@@ -74,3 +81,5 @@ Projeto moveit-next
     * Por isso é melhor usar cookes, do que LocalStorage
 
     * Quando for usar next, melhor usar cookes, para armazenar dados
+
+* Pesquisar sobre TWA - aplicação responsiva
