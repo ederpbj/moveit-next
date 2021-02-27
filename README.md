@@ -24,6 +24,12 @@ Projeto moveit-next
 
 [Moveit Vercel Prod](https://moveit-next-peach.vercel.app/)
 
+[moveiti-next no versel](https://vercel.com/ederpbj/moveit-next/deployments)
+
+### Extra aplicação
+
+[oauth git hub](https://docs.github.com/pt/developers/apps/authorizing-oauth-apps)
+
 ### Outros videos
 
 [Equipe Rocket](https://www.youtube.com/watch?v=5CZmkjFHe4U&ab_channel=Rocketseat)
