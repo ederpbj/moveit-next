@@ -1,8 +1,8 @@
 //Context API, substitui redux
-
 import { createContext, ReactNode, useEffect, useState } from 'react';
-
+import Cookies from 'js-cookie';
 import challenges from '../../challenges.json';
+import { LevelUpModal } from '../components/LevelUpModal';
 
 interface Challenge {
     type: 'body' | 'eye'; //só pode ser um desses dois tipos predefinidos
@@ -22,10 +22,14 @@ interface ChallengesContextData {
     startNewChallenge: () => void;
     resetChallenge: () => void;
     completeChallenge: () => void; //quando esta completo o challenge
+    closeLevelUpModal: () => void;
 }
 
 interface ChallengesProviderProps {
     children: ReactNode; //aceita qualquer elemento filho
+    level: number;
+    currentExperience: number;
+    challengesCompleted: number;
 }
 
 //Contexto de api interno, serve para troca de informações entre os componentes
@@ -33,12 +37,16 @@ interface ChallengesProviderProps {
 export const ChallengesContext = createContext({} as ChallengesContextData);
 
 //o tipo das propriedades é: : ChallengesProviderProps
-export function ChallengesProvider({ children }: ChallengesProviderProps) {
-    const [level, setLevel] = useState(1);
-    const [currentExperience, setCurrentExperience] = useState(0);
-    const [challengesCompleted, setChallengesCompleted] = useState(0);
-
+export function ChallengesProvider({
+    children,
+    ...rest
+}: ChallengesProviderProps) {
+    const [level, setLevel] = useState(rest.level ?? 1);
+    const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0);
+    const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0);
     const [activeChallenge, setActiveChallenge] = useState(null);
+
+    const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false); //abrir modal
 
     //Calculo na potencia 2
     //4 é Fator de experiência
@@ -48,11 +56,23 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
         Notification.requestPermission();
     }, []) //Executa uma só vez
 
+    useEffect(() => {
+        Cookies.set('level', String(level)); //só aceita string
+        Cookies.set('currentExperience', String(currentExperience));
+        Cookies.set('challengesCompleted', String(challengesCompleted));
+    }, [level, currentExperience, challengesCompleted]) //sempre que alterar, dispara useEffect
+    // << armazenar essas informações nos cookes
+
     // useEffect(() => {},[]) //Executa uma única vez com [], assim q for exibido em tela
     // console.log('experienceToNextLevel >>>> ', experienceToNextLevel);
 
     function levelUp() {
         setLevel(level + 1);
+        setIsLevelUpModalOpen(true); //para abri modal
+    }
+
+    function closeLevelUpModal() {
+        setIsLevelUpModalOpen(false);
     }
 
     function startNewChallenge() {
@@ -113,8 +133,11 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
             startNewChallenge,
             resetChallenge,
             completeChallenge,
+            closeLevelUpModal,
         }}>
             {children}
+
+            {isLevelUpModalOpen && <LevelUpModal />}
         </ChallengesContext.Provider>
     )
 }

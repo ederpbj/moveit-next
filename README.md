@@ -24,6 +24,8 @@ Projeto moveit-next
 
 ### Aulas NLW
 
+[Meus videos](...\Videos\DEV\NLW)
+
 [Aula 1 - NLW](https://nextlevelweek.com/episodios/react/1/edicao/4?utm_source=convertkit&utm_medium=email&utm_campaign=NLW4+Aulas+dispon%C3%ADveis&utm_term=Leads+cadastrados&utm_content=Aula+01+React)
 
 [Aula 2 - Desvendando o Next.js](https://www.youtube.com/watch?v=7ceWRavb6Ac&feature=emb_title&ab_channel=DiegoFernandes)
@@ -38,6 +40,10 @@ Projeto moveit-next
 
 `yarn dev` >> rodar em modo dev
 
+`yarn add js-cookie` >> trabalhar com armazenamento nos cookies
+
+`yarn add @types/js-cookie -D` >> tipagem para cookies, no impor aparece ..., D: dependencia de desenvolvimento
+
 `` >>
 
 ### Obs
@@ -45,3 +51,9 @@ Projeto moveit-next
 * _app.js 
 
     * serve para criar uma página prévia, Ex: para side-bar
+
+* O servidor node não tem acesso ao browser
+    
+    * Por isso é melhor usar cookes, do que LocalStorage
+
+    * Quando for usar next, melhor usar cookes, para armazenar dados
