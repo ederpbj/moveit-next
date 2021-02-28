@@ -2,6 +2,7 @@
 import { createContext, ReactNode, useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import challenges from '../../challenges.json';
+import profiles from '../../profiles.json';
 import { LevelUpModal } from '../components/LevelUpModal';
 
 interface Challenge {
@@ -9,6 +10,7 @@ interface Challenge {
     description: string;
     amount: number;
 }
+
 
 //Dados que vou retornar do meu contexto
 //formato a ser seguido
@@ -23,6 +25,7 @@ interface ChallengesContextData {
     resetChallenge: () => void;
     completeChallenge: () => void; //quando esta completo o challenge
     closeLevelUpModal: () => void;
+    receiveProfile: () => void;
 }
 
 interface ChallengesProviderProps {
@@ -74,6 +77,7 @@ export function ChallengesProvider({
     function closeLevelUpModal() {
         setIsLevelUpModalOpen(false);
     }
+
 
     function startNewChallenge() {
         //pega números aleatórios do tamanho do array e arredonda

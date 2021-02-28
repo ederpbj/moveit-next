@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import styles from '../styles/pages/Ranking.module.css';
 
 import profiles from '../../profiles.json';
+import { Profile } from '../components/Profile';
 
 export default function Ranking() {
     const [profilesList, setProfilesList] = useState([]);
@@ -26,11 +27,16 @@ export default function Ranking() {
                 {profilesList.map((item, index) =>
                     <span key={index}>
                         <p>Posição: {item.position}</p>
+                        <Profile name={item.name} />
                         <p>Nome: {item.name}</p>
                         <p>Level: {item.level}</p>
                         <p>Avatar: {item.avatar}</p>
                     </span>
                 )}
+            </div>
+
+            <div>
+
             </div>
             <strong>Acaba aqui</strong>
         </div>
