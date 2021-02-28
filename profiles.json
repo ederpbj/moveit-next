@@ -1,0 +1,20 @@
+[
+    {
+        "position": 1,
+        "name": "Eder Pires",
+        "level": 6,
+        "avatar": "icons/body.svg"
+    },
+    {
+        "position": 2,
+        "name": "Eduardo Emidio",
+        "level": 5,
+        "avatar": "icons/eye.svg"
+    },
+    {
+        "position": 3,
+        "name": "Ellen Sofia",
+        "level": 2,
+        "avatar": "icons/body.svg"
+    }
+]

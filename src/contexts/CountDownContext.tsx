@@ -24,7 +24,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
     //Usando context criado para toda aplicação
     const { startNewChallenge } = useContext(ChallengesContext);
 
-    const [time, setTime] = useState(25 * 60); //define tempo de 25 min
+    const [time, setTime] = useState(0.05 * 60); //define tempo de 25 min
     const [isActive, setIsActive] = useState(false); //monitora se esta ativo botão
     const [hasFineshed, setHasFineshed] = useState(false); //monitora se finalizou cowntdown
 
@@ -41,7 +41,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
         clearTimeout(countdownTimeout);
         setIsActive(false);
         setHasFineshed(false);
-        setTime(25 * 60);
+        setTime(0.05 * 60);
     }
 
     //Dispara efeitos colaterais, após algum evento
